@@ -1,9 +1,8 @@
-FROM nodered/node-red:latest
+FROM nodered/node-red:3.1.9-debian
 
 USER root
 
 RUN apt update && apt install -y sshpass \
-    && apt clean \
-    && rm -rf /var/lib/apt/lists/*
+    && apt clean && rm -rf /var/lib/apt/lists/*
 
 USER node-red
