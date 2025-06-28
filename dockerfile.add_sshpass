@@ -1,4 +1,4 @@
-FROM ghcr.io/node-red/node-red:4.0.9-alpine
+FROM wen-cf-docker-hub.20241118.xyz/nodered/node-red:latest
 
 USER root
 
