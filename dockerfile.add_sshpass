@@ -1,8 +1,7 @@
-FROM nodered/node-red:3.1.9-alpine
+FROM nodered/node-red:alpine
 
 USER root
 
-# 安装 sshpass（在 Alpine 中包名也是 sshpass）
-RUN apk update && apk add --no-cache sshpass
+RUN apk add --no-cache sshpass
 
 USER node-red
