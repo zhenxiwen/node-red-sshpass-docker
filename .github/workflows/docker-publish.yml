@@ -26,8 +26,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
-          context: .
-          file: ./node-red-sshpass-docker/dockerfile.add_sshpass
+          context: node-red-sshpass-docker
+          file: ./dockerfile.add_sshpass
           push: true
           tags: ghcr.io/zhenxiwen/node-red-sshpass-docker:latest
 
