@@ -1,8 +1,8 @@
-FROM nodered/node-red:3.1.9-debian
+FROM nodered/node-red:3.1.9-alpine
 
 USER root
 
-RUN apt update && apt install -y sshpass \
-    && apt clean && rm -rf /var/lib/apt/lists/*
+# 安装 sshpass（在 Alpine 中包名也是 sshpass）
+RUN apk update && apk add --no-cache sshpass
 
 USER node-red
